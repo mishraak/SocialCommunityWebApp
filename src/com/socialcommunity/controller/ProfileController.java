@@ -41,7 +41,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 	private Post Post;
 	
 	
-	  @RequestMapping(value = "/lendingPage/{username}", method = RequestMethod.GET)
+	  @RequestMapping(value = "/landingPage/{username}", method = RequestMethod.GET)
 	  public ModelAndView profilePage(@PathVariable("username")String username,HttpSession session,Model model) throws HibernateException, NoSuchAlgorithmException
 	  {
 	    	
@@ -65,7 +65,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 			
 		return model1;
 	  }  
-	  @RequestMapping(value = "/lendingPage/public/all", method = RequestMethod.GET)
+	  @RequestMapping(value = "/landingPage/public/all", method = RequestMethod.GET)
 	  public ModelAndView publicprofilePage(HttpServletRequest request, HttpServletResponse response,Model model) throws HibernateException, NoSuchAlgorithmException
 	  {
 		  ObjectMapper mapper = new ObjectMapper();
@@ -87,7 +87,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 		return model1;
 	  }
 
-	  @RequestMapping(value = "/lendingPage/public/{username}", method = RequestMethod.GET)
+	  @RequestMapping(value = "/landingPage/public/{username}", method = RequestMethod.GET)
 	  public ModelAndView publicprofile(@PathVariable("username")String user,HttpServletRequest request, HttpServletResponse response,Model model) throws HibernateException, NoSuchAlgorithmException
 	  {
 		  ObjectMapper mapper = new ObjectMapper();
@@ -113,7 +113,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 			
 		return model1;
 	  }
-	  @RequestMapping(value = "/lendingPage/{username}/post",method = RequestMethod.POST)
+	  @RequestMapping(value = "/landingPage/{username}/post",method = RequestMethod.POST)
 	  public @ResponseBody()
 	  String add(HttpServletRequest request, HttpServletResponse response,HttpSession session)
 	    throws Exception {
@@ -137,7 +137,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 	   return "Submit";
 	  }
 	  
-  @RequestMapping(value = "/lendingPage/public/search",method = RequestMethod.GET)
+  @RequestMapping(value = "/landingPage/public/search",method = RequestMethod.GET)
 	  public @ResponseBody()
 	  String Search(HttpServletRequest request, HttpServletResponse response,HttpSession session)
 	    throws Exception {
@@ -158,7 +158,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 	   return json;
 	  }
 
-  @RequestMapping(value = "/lendingPage/{username}/show",method = RequestMethod.POST)
+  @RequestMapping(value = "/landingPage/{username}/show",method = RequestMethod.POST)
 	  public @ResponseBody()
 	  String show(HttpServletRequest request, HttpServletResponse response,HttpSession session)
 	    throws Exception {
@@ -179,7 +179,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 		}
 	   return output;
 	  }
-  @RequestMapping(value = "/lendingPage/{username}/list",method = RequestMethod.POST)
+  @RequestMapping(value = "/landingPage/{username}/list",method = RequestMethod.POST)
 	  public @ResponseBody()
 	  String list(HttpServletRequest request, HttpServletResponse response,HttpSession session) throws Exception {
 	   
@@ -199,7 +199,7 @@ protected static Logger logger = Logger.getLogger("ProfileController");
 	  	}
 
   
-  @RequestMapping(value = "/lendingPage/public/{username}/list",method = RequestMethod.POST)
+  @RequestMapping(value = "/landingPage/public/{username}/list",method = RequestMethod.POST)
   public @ResponseBody()
   String listPublic(@PathVariable("username")String username,HttpServletRequest request, HttpServletResponse response,HttpSession session) throws Exception {
    

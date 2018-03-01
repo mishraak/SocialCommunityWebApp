@@ -43,7 +43,7 @@ public class MainController {
 	 * @return the name of the JSP page
 	 */
 
-	@RequestMapping(value = "/lendingPage",method = RequestMethod.GET)
+	@RequestMapping(value = "/landingPage",method = RequestMethod.GET)
 	public String lendingPage()
 	{
 		return "index";
@@ -75,7 +75,7 @@ public class MainController {
      * @return  the name of the JSP page
      * @throws NoSuchAlgorithmException 
      */  
-    @RequestMapping(value = "/lendingPage/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/landingPage/add", method = RequestMethod.POST)
     public String addPerson(@ModelAttribute("personAttribute") Person person,BindingResult result) throws NoSuchAlgorithmException {
 		logger.debug("Received request to add new person");
 		
@@ -83,7 +83,7 @@ public class MainController {
     	// We use the name "personAttribute" because the JSP uses that name
 		try {
 		if (result.hasErrors()) {
-		     return "/lendingPage";
+		     return "/landingPage";
 		   }
 	
 		System.out.println(person.getFirstName());
@@ -93,15 +93,15 @@ public class MainController {
 
 		
 		} catch (Exception e) {
-			return "redirect:/lendingPage/error";
+			return "redirect:/landingPage/error";
 		}
 		
 		
     	// This will resolve to /WEB-INF/jsp/addedpage.jsp
-		return "redirect:/lendingPage	";
+		return "redirect:/landingPage	";
 	}
 
-  @RequestMapping(value = "/lendingPage/login", method = RequestMethod.POST)
+  @RequestMapping(value = "/landingPage/login", method = RequestMethod.POST)
   public String login(@ModelAttribute("personlogin") Person person,BindingResult result,HttpSession session) throws HibernateException, NoSuchAlgorithmException
   {
 	  
@@ -116,18 +116,18 @@ public class MainController {
 
 			return "redirect:/admin";
 		} else {
-			return "redirect:/lendingPage/"+person.getUsername();
+			return "redirect:/landingPage/"+person.getUsername();
 		}
 	
 	}
 	else
 	{
-		return "redirect:/lendingPage/error";
+		return "redirect:/landingPage/error";
 	}
       
 }
 
-  @RequestMapping(value = "/lendingPage/error", method = RequestMethod.GET)
+  @RequestMapping(value = "/landingPage/error", method = RequestMethod.GET)
   public String error() throws HibernateException, NoSuchAlgorithmException
   {
 	  
@@ -135,7 +135,7 @@ public class MainController {
   }
 
  
-  @RequestMapping(value = "/lendingPage/logout", method = RequestMethod.GET)
+  @RequestMapping(value = "/landingPage/logout", method = RequestMethod.GET)
   public String logout(HttpSession session) throws NoSuchAlgorithmException {
 		logger.debug("Received request to add new person");
 	
@@ -145,7 +145,7 @@ public class MainController {
 		}		
 		
   	
-		return "redirect:/lendingPage	";
+		return "redirect:/landingPage	";
 	}
   
 /*
