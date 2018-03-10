@@ -1,5 +1,7 @@
-# SOCIAL NETWORKING APP DEVELOPED USING JAVA, HIBERNATE, MYSQL
+# Social Networking App Developed Using Java, Hibernate, MySQL
 
-## EXPORT THE JAR OF SOCIAL COMMUNITY DAO AND ADD TO THE BUILD PATH OF SOCIAL COMMUNITY SERVICE
-## EXPORT THE JAR OF SOCIAL COMMUNITY SERVICE AND ADD TO THE PATH OF PROJECT SOCIAL COMMUNITY 
-## DEPLOY PROJECT SOCIAL COMMUNITY OF APACHE TOMCAT SERVER
+## How to get started?
+
+### Export the JAR of Social Community DAO & add it to the build path of Social Community Service
+### Export the JAR of Social Community Service and add to the path of project Social Community
+### Deploy project Social Community to Apache Tomcat Server
